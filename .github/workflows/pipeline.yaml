@@ -2,7 +2,7 @@ name: CI CD PIPELINE
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -22,4 +22,3 @@ jobs:
 
       - name: Run Tests
         run: npm test
-        
