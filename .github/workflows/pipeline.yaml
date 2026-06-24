@@ -2,19 +2,20 @@ name: CI CD PIPELINE
 
 on:
   push:
-   branch: [main]
+    branches: [main]
 
-jobs: 
+jobs:
   build:
-    runs-on:  ubantu-latest
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
-      - name: Setup Nodejs
-        uses: actions/setup-node@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          node-verison: 16
+          node-version: 20
 
       - name: Install Dependencies
         run: npm install
